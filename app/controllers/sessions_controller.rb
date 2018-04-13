@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     @user = @user.try(:authenticate, params[:user][:password])
     unless @user
       flash[:notice] = "Invalid Username or Password."
-      return redirect_to(controller: 'sessions', action: 'new') 
+      return redirect_to(controller: 'sessions', action: 'new')
     end
 
     session[:user_id] = @user.id
