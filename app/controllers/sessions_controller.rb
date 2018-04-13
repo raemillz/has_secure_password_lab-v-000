@@ -15,4 +15,5 @@ class SessionsController < ApplicationController
 
    redirect_to controller: 'welcome', action: 'home'
  end
+ 
 end
