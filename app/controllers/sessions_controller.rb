@@ -15,5 +15,5 @@ class SessionsController < ApplicationController
 
    redirect_to controller: 'welcome', action: 'index'
  end
- 
+
 end
