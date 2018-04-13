@@ -9,10 +9,13 @@ class SessionsController < ApplicationController
       flash[:notice] = "Invalid Username or Password."
       return redirect_to(controller: 'sessions', action: 'new')
     end
-
     session[:user_id] = @user.id
-
     redirect_to controller: 'welcome', action: 'index'
+  end
+
+  def destroy
+    session.delete :user_id
+    redirect_to '/'
   end
 
 end
